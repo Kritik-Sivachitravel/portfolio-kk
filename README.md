@@ -5,13 +5,19 @@ This is my Personal Portfolio Website, designed to showcase my skills, projects,
 🛠️ Technologies Used
 
 🖥 Frontend: HTML, CSS, JavaScript
+
 🎨 UI Icons & Animations: Boxicons, GSAP
+
 🌎 Hosting: Netlify
 
 🚀 Features
 
 ✅ Responsive Design – Works on all devices (mobile-friendly).
+
 ✅ Dynamic Animations – Smooth scrolling and transitions.
+
 ✅ Projects Showcase – Highlights my projects with links to GitHub repositories.
+
 ✅ Contact Form – Users can reach out to me directly.
+
 ✅ Live Links to Resume & Social Media – Quick access to my GitHub, LinkedIn, etc.
