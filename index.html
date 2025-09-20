@@ -1,177 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kritik Sivachitravel Personal Portfolio</title>
+    <title>Kritik Sivachitravel | Software Engineer</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico"> <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <!-- box icons -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+<body class="bg-gray-900 text-gray-100 font-sans overflow-x-hidden">
+    <canvas id="node-network-canvas"></canvas>
 
-<body>
+    <div id="preloader">
+        <div id="binary-background"></div>
+        <div class="glitch" data-text="Kritik Sivachitravel">Kritik Sivachitravel</div>
+    </div>
+    
+    <nav class="fixed w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="#home" class="text-xl font-bold bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Kritik Sivachitravel</a>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-white transition-colors shine-effect">Home</a>
+                    <a href="#education" class="text-gray-300 hover:text-white transition-colors shine-effect">Education</a>
+                    <a href="#experience" class="text-gray-300 hover:text-white transition-colors shine-effect">Experience</a>
+                    <a href="#projects" class="text-gray-300 hover:text-white transition-colors shine-effect">Projects</a>
+                    <a href="#skills" class="text-gray-300 hover:text-white transition-colors shine-effect">Skills</a>
+                    <a href="#certifications" class="text-gray-300 hover:text-white transition-colors shine-effect">Certifications</a>
+                    <a href="#leadership" class="text-gray-300 hover:text-white transition-colors shine-effect">Leadership</a>
+                    <a href="#contact" class="text-gray-300 hover:text-white transition-colors shine-effect">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-300 hover:text-white focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-900 bg-opacity-95">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Home</a>
+                <a href="#education" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Education</a>
+                <a href="#experience" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Experience</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Projects</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Skills</a>
+                <a href="#certifications" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Certifications</a>
+                <a href="#leadership" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Leadership</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-white mobile-nav-link shine-effect">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <div class="wrapper">
-        <div class="cover cover-left"></div>
-        <div class="cover cover-right"></div>
-
-        <div class="book">
-            <!-- profile page -->
-            <div class="book-page page-left">
-                <div class="profile-page">
-                    <img src="photo.jpeg" alt="">
-                    <h1>Kritik Sivachitravel</h1>
-                    <h3>Student, The Pennsylvania State University</h3>
-
-                    <div class="social-media">
-                        <a href="https://www.linkedin.com/in/kritik-sivachitravel/"><i class='bx bxl-linkedin'></i></a>
-                        <a href="https://www.instagram.com/kritiksivac/"><i class='bx bxl-instagram-alt'></i></a>
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
+            <div class="flex flex-col md:flex-row items-center md:gap-8">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-5xl md:text-7xl font-bold mb-5 shine-effect">Hi, I'm <span class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent">Kritik Sivachitravel</span></h1>
+                    <h2 class="text-3xl md:text-4xl font-semibold mb-8 h-10">
+                        <div class="scrolling-words-container">
+                            <div class="scrolling-words-box">
+                                <span>Software Engineer</span>
+                                <span>AI Developer</span>
+                                <span>Quality Control Specialist</span>
+                                <span>Cricketer</span>
+                                <span>Software Engineer</span>
+                                <span>AI Developer</span>
+                                <span>Quality Control Specialist</span>
+                                <span>Cricketer</span>
+                            </div>
+                        </div>
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-10 max-w-xl">
+                        A motivated Computer Science student at Penn State with a passion for building full-stack applications and AI-powered solutions. Experienced in developing modern web technologies and cloud platforms.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 rounded-md text-white font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all text-lg">
+                            Contact Me
+                        </a>
+                        <a href="resume.pdf" target="_blank" class="px-8 py-4 border border-gray-700 rounded-md text-white font-medium hover:bg-gray-800 transition-all text-lg">
+                            Download CV
+                        </a>
                     </div>
-
-                    <p>Hello there! I am Kritik Sivachitravel, a junior at the Pennsylvania State University majoring in Computer Science actively seeking an internship. </p>
-
-                    <div class="btn-box">
-                        <a href="Resume - Kritik Sivachitravel.pdf" class="btn" target="_blank">Download CV</a>
-                        <a href="#" class="btn contact-me">Contact Me</a>
+                    <div class="flex mt-10 space-x-6">
+                        <a href="https://github.com/kritik-sivachitravel" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="github" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/kritik-sivachitravel" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="linkedin" class="w-8 h-8"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kritiksivac/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                            <i data-feather="instagram" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <div class="relative">
+                        <div class="w-80 h-80 md:w-[28rem] md:h-[28rem] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-purple-500 to-blue-500 p-2">
+                            <img src="profile.jpg" alt="Kritik Sivachitravel" class="w-full h-full object-cover rounded-full">
+                        </div>
+                        <div class="absolute -inset-4 rounded-full border-2 border-purple-500 opacity-0 hover:opacity-100 animate-pulse transition-opacity duration-300 pointer-events-none"></div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- page 1 & 2 -->
-            <div class="book-page page-right turn" id="turn-1">
-                <!-- page 1 (education) -->
-                <div class="page-front">
-                    <h1 class="title">Education</h1>
-
-                    <div class="workeduc-box">
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bxs-calendar'></i>2007 - 2022</span>
-                            <h3>The PSBB Millennium School, Chennai (CBSE)</h3>
-                            <h4>Class 10 CBSE India - 92.4% (June 2020)</h4>
-                            <h4>Class 12 CBSE India - 82.2% (May 2022)</h4>
-                        </div>
-
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bxs-calendar'></i>2022 - Current</span>
-                            <h3>The Pennsylvania State University - Bachelor of Science in Computer Science</h3>
-                            <h4>CGPA - 3.52 / 4 (As of Fall 2024)</h4>
-                        </div>
+    <section id="education" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Education</h2>
+            </div>
+            <div class="glass-card max-w-3xl mx-auto p-8 rounded-lg" data-aos="fade-up">
+                <div class="flex flex-col sm:flex-row items-center gap-8 text-center sm:text-left">
+                    <div class="flex-shrink-0">
+                        <img src="logo3.jpg" alt="Penn State Logo" class="w-32 h-32 rounded-full object-cover">
                     </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-white">The Pennsylvania State University</h3>
+                        <p class="text-purple-400 font-semibold mb-2">Bachelor of Science, Aug 2022 - May 2026</p>
+                        <div class="mt-4">
+                            <p class="text-lg text-gray-100"><strong class="font-semibold">Major:</strong> Computer Science</p>
+                        </div>
+                        <ul class="text-gray-300 space-y-2 mt-2 list-disc list-inside ml-4">
+                            <li><strong class="font-semibold text-gray-100">Minor:</strong> Mathematics</li>
+                            <li><strong class="font-semibold text-gray-100">Minor:</strong> Engineering Leadership and Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <h1 class="title">Skills</h1>
-
-                    <div class="skills-box">
-                        <div class="skills-content">
-                            <h3>Computer Science</h3>
-                            <div class="content">
-                                <span><i class='bx bxl-python'></i>Python</span>
-                                <span><i class='bx bxl-java' ></i>Java</span>
-                                <span><i class='bx bxl-c-plus-plus' ></i>C</span>
-                                <span><i class='bx bxl-html5' ></i>HTML</span>
-                                <span><i class='bx bxl-css3' ></i>CSS</span>
-                                <span><i class='bx bxl-javascript' ></i>JavaScript</span>
+    <section id="experience" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Work Experience</h2>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-blue-500 transform -translate-x-1/2"></div>
+                <div class="space-y-8 md:space-y-16">
+                    <div class="relative" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-8 md:pl-0 pl-8 md:text-right">
+                            <div class="glass-card p-6 rounded-lg relative overflow-hidden flex flex-row-reverse md:flex-row gap-6">
+                                <div class="flex-shrink-0 text-center">
+                                    <img src="logo1.jpg" alt="GenAI Embed Inc. Logo" class="w-24 h-24 rounded-md object-cover bg-gray-700 mx-auto">
+                                    <p class="text-gray-400 text-sm mt-2">May 2025 - Aug 2025</p>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold mb-2">Software Engineering Intern</h3>
+                                    <p class="text-purple-400 mb-2">GenAI Embed Inc.</p>
+                                    <p class="text-gray-300">
+                                        Built GenAI-powered solutions for client use cases and developed UIs with React.js, Tailwind CSS, and Vite.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <span class="number-page">1</span>
-
-                    <!-- next button -->
-                    <span class="nextprev-btn" data-page="turn-1">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-                
-                <!-- page 2 (Leadership and Campus Involvement) -->
-                <div class="page-back">
-                    <h1 class="title">Leadership and Campus Involvement</h1>
-
-                    <div class="workeduc-box">
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bxs-calendar'></i>2023 - Current</span>
-                            <h3>Vice President - Penn State Club Cricket</h3>
-                            <p>Experience in conducting selections and participating in tournaments, managing finance and travel logistics of the club and its members. Represented the university in national tournaments and achieved good success as Vice Captain of the team.</p>
-                        </div>
-                    
-                        <div class="workeduc-content">
-                            <span class="year"><i class='bx bxs-calendar'></i>2022 - 2023</span>
-                            <h3>Events Planning Chair - IST LLC</h3>
-                            <p>Planned and conducted successful events throughout the year for the members of the Information Sciences and Technology Living Learning Community.</p>
+                    <div class="relative" data-aos="fade-up">
+                        <div class="md:w-1/2 md:ml-auto md:pl-8 pl-8">
+                            <div class="glass-card p-6 rounded-lg relative overflow-hidden flex flex-row md:flex-row-reverse gap-6">
+                                <div class="flex-shrink-0 text-center">
+                                    <img src="logo2.jpg" alt="All Traffic Solutions Logo" class="w-24 h-24 rounded-md object-cover bg-gray-700 mx-auto">
+                                    <p class="text-gray-400 text-sm mt-2">Jun 2025 - Present</p>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold mb-2">Quality Control Specialist</h3>
+                                    <p class="text-purple-400 mb-2">All Traffic Solutions</p>
+                                    <p class="text-gray-300">
+                                        Lead testing and QA of smart traffic signs, ensuring flawless hardware performance and embedded software accuracy.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <span class="number-page">2</span>
-                    
-                    <!-- prev button -->
-                    <span class="nextprev-btn back" data-page="turn-1">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
+                    <div class="relative" data-aos="fade-up">
+                        <div class="md:w-1/2 md:pr-8 md:pl-0 pl-8 md:text-right">
+                            <div class="glass-card p-6 rounded-lg relative overflow-hidden flex flex-row-reverse md:flex-row gap-6">
+                                <div class="flex-shrink-0 text-center">
+                                    <img src="logo3.jpg" alt="Penn State Logo" class="w-24 h-24 rounded-md object-cover bg-gray-700 mx-auto">
+                                    <p class="text-gray-400 text-sm mt-2">Aug 2024 - Present</p>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold mb-2">Mathematics Learning Assistant</h3>
+                                    <p class="text-purple-400 mb-2">Eberly College Of Science - Penn State</p>
+                                    <p class="text-gray-300">
+                                        Assisted students during lectures, held weekly review sessions, and supported instructors in teaching coursework.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <!-- page 3 & 4 -->
-            <div class="book-page page-right turn" id="turn-2">
-                <!-- page 3 (my projects) -->
-                <div class="page-front">
-                    <h1 class="title">My Projects</h1>
-
-                    <div class="services-box">
-                        <div class="services-content">
-                            <i class='bx bxs-hotel'></i>
-                            <h3>Hotel Application</h3>
-                            <p>Hotel Management and Booking application using Python for functioning and MySQL to store and use the booking database</p>
-                        </div>
-
-                        <div class="services-content">
-                            <i class='bx bx-desktop'></i>
-                            <h3>Breast Cancer Growth Detection</h3>
-                            <p>Random Forest Machine Learning model that detects the growth of breast cancer in patients using a dataset of 6000 entries accurately. </p>
-                        </div>
-                    </div>
-
-                    <span class="number-page">3</span>
-                    
-                    <!-- next button -->
-                    <span class="nextprev-btn" data-page="turn-2">
-                        <i class='bx bx-chevron-right'></i>
-                    </span>
-                </div>
-                
-                <!-- page 4 (contact me) -->
-                <div class="page-back">
-                    <h1 class="title">Contact Me!</h1>
-
-                    <div class="contact-box">
-                        <form action="#">
-                            <input type="text" class="field" placeholder="Full Name" required>
-                            <input type="email" class="field" placeholder="Email Address" required>
-                            <textarea name="" id="" cols="30" rows="10" class="field" placeholder="Your Message" required></textarea>
-                            <input type="submit" class="btn" value="Send Message">
-                        </form>
-                    </div>
-
-                    <span class="number-page">4</span>
-                    
-                    <!-- prev button -->
-                    <span class="nextprev-btn back" data-page="turn-2">
-                        <i class='bx bx-chevron-left'></i>
-                    </span>
-
-                    <a href="#" class="back-profile">
-                        <p>Profile</p>
-                        <i class='bx bxs-user'></i>
-                    </a>
-                </div>
-            </div>
-
         </div>
-    </div>
+    </section>
 
+    <section id="projects" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Projects</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card rounded-lg overflow-hidden relative" data-aos="fade-up">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDR8fHNhbG9ufGVufDB8fHx8MTY3ODg2MzYyMQ&ixlib=rb-4.0.3&q=80&w=400" alt="SalonPilot Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">SalonPilot - Booking Platform</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">MERN Stack</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">Tailwind CSS</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                A full-stack web app for salons to streamline customer bookings and eliminate manual calls.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/Repo-SalonPilot" target="_blank" class="text-sm text-purple-400 hover:text-purple-300 flex items-center">
+                                    <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-lg overflow-hidden relative" data-aos="fade-up" data-aos-delay="100">
+                     <div class="relative">
+                        <img src="swappify.jpeg" alt="Swappify Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Swappify - Clothing Exchange</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">React Native</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">Supabase</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">Stripe</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                A full-stack clothing exchange platform with user auth, token rewards, and secure payments.
+                            </p>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/theswappingapp/swappify" target="_blank" class="text-sm text-purple-400 hover:text-purple-300 flex items-center">
+                                    <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-lg overflow-hidden relative" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDF8fG1lZGljYWwlMjBkYXRhfGVufDB8fHx8MTY3ODg2MzcyMw&ixlib=rb-4.0.3&q=80&w=400" alt="Breast Cancer Detection Project" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Breast Cancer Growth Detection</h3>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">ML</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">NumPy</span>
+                                <span class="px-2 py-1 bg-gray-800 rounded-md text-xs text-gray-300">Scikit-learn</span>
+                            </div>
+                            <p class="text-gray-300 mb-4">
+                                Trained a Random Forest model on 5500+ entries to detect breast cancer growth with high accuracy.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Technical Skills</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="glass-card p-6 rounded-lg" data-aos="fade-up">
+                    <h3 class="text-xl font-bold mb-4 text-center">Languages</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center"><i data-feather="code" class="w-5 h-5 mr-3 text-purple-400"></i><span>Java & Python</span></div>
+                        <div class="flex items-center"><i data-feather="code" class="w-5 h-5 mr-3 text-purple-400"></i><span>C & C++</span></div>
+                        <div class="flex items-center"><i data-feather="code" class="w-5 h-5 mr-3 text-purple-400"></i><span>JavaScript</span></div>
+                        <div class="flex items-center"><i data-feather="code" class="w-5 h-5 mr-3 text-purple-400"></i><span>HTML/CSS & SQL</span></div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-xl font-bold mb-4 text-center">Frontend</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center"><i data-feather="layout" class="w-5 h-5 mr-3 text-blue-400"></i><span>React.js & React Native</span></div>
+                        <div class="flex items-center"><i data-feather="box" class="w-5 h-5 mr-3 text-blue-400"></i><span>Tailwind CSS</span></div>
+                        <div class="flex items-center"><i data-feather="layout" class="w-5 h-5 mr-3 text-blue-400"></i><span>Vite</span></div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-xl font-bold mb-4 text-center">Backend & Database</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center"><i data-feather="server" class="w-5 h-5 mr-3 text-green-400"></i><span>Node.js</span></div>
+                        <div class="flex items-center"><i data-feather="database" class="w-5 h-5 mr-3 text-green-400"></i><span>PostgreSQL</span></div>
+                        <div class="flex items-center"><i data-feather="database" class="w-5 h-5 mr-3 text-green-400"></i><span>MongoDB</span></div>
+                        <div class="flex items-center"><i data-feather="hard-drive" class="w-5 h-5 mr-3 text-green-400"></i><span>Supabase</span></div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-xl font-bold mb-4 text-center">Developer Tools</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-center"><i data-feather="git-branch" class="w-5 h-5 mr-3 text-yellow-400"></i><span>Git & GitHub</span></div>
+                        <div class="flex items-center"><i data-feather="cloud" class="w-5 h-5 mr-3 text-yellow-400"></i><span>AWS</span></div>
+                        <div class="flex items-center"><i data-feather="terminal" class="w-5 h-5 mr-3 text-yellow-400"></i><span>Linux</span></div>
+                        <div class="flex items-center"><i data-feather="tool" class="w-5 h-5 mr-3 text-yellow-400"></i><span>VS Code</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Certifications</h2>
+                <p class="text-gray-400 mt-2">Click on a card to see the credential.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 scene">
+                <div class="h-64 flip-card" data-aos="fade-up">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card p-6 flex flex-col items-center justify-center text-center cursor-pointer">
+                            <img src="AWS.png" alt="AWS Logo" class="w-24 h-auto mb-4">
+                            <h3 class="text-xl font-bold mb-1">AWS Certified Cloud Practitioner</h3>
+                            <p class="text-gray-400 text-sm">Issued: May 2025</p>
+                            <a href="https://www.credly.com/badges/bd3d0f69-4545-46f7-8f4c-de4d9d79b4ed/public_url" target="_blank" class="mt-4 text-sm text-purple-400 hover:text-purple-300 flex items-center" onclick="event.stopPropagation()">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> View Certificate
+                            </a>
+                            <div class="flip-indicator">
+                                <i data-feather="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <img src="AWS CCP.png" alt="AWS Certified Cloud Practitioner Badge" class="w-full h-full object-contain p-4">
+                        </div>
+                    </div>
+                </div>
+                <div class="h-64 flip-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card p-6 flex flex-col items-center justify-center text-center cursor-pointer">
+                            <img src="AWS.png" alt="AWS Logo" class="w-24 h-auto mb-4">
+                            <h3 class="text-xl font-bold mb-1">AWS Certified AI Practitioner</h3>
+                            <p class="text-gray-400 text-sm">Issued: Aug 2025</p>
+                            <a href="https://www.credly.com/badges/0084b434-965f-412a-abb4-bbf9212ece12/public_url" target="_blank" class="mt-4 text-sm text-purple-400 hover:text-purple-300 flex items-center" onclick="event.stopPropagation()">
+                                <i data-feather="external-link" class="w-4 h-4 mr-1"></i> View Certificate
+                            </a>
+                            <div class="flip-indicator">
+                                <i data-feather="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                             <img src="AWS AI.png" alt="AWS AI Practitioner Badge" class="w-full h-full object-contain p-4">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-20 bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Leadership & Involvement</h2>
+                <p class="text-gray-400 mt-2">Click on the card to see our National Championship!</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto scene" data-aos="fade-up">
+                <div class="h-[28rem] flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front glass-card p-8 rounded-lg flex flex-col md:flex-row items-start gap-8 cursor-pointer">
+                            <div class="text-center md:text-left md:w-1/3 flex flex-col items-center">
+                                <img src="President.jpeg" alt="Kritik Sivachitravel as Penn State Club Cricket President" class="w-full h-auto object-cover rounded-lg mb-4 max-w-[210px] md:max-w-[230px]">
+                                <h3 class="text-2xl font-bold text-white flex items-center justify-center md:justify-start">
+                                    <i data-feather="award" class="w-6 h-6 mr-2 text-purple-400"></i> President
+                                </h3>
+                                <a href="https://www.instagram.com/pennstatecricket/" target="_blank" rel="noopener noreferrer" class="text-purple-400 font-semibold text-center flex items-center justify-center md:justify-start hover:text-purple-300 transition-colors">
+                                    <i data-feather="instagram" class="w-4 h-4 mr-2"></i>
+                                    <span>Penn State Club Cricket</span>
+                                </a>
+                            </div>
+                            <div class="md:w-2/3 border-t-2 md:border-t-0 md:border-l-2 border-gray-700 pt-6 md:pt-0 md:pl-8">
+                                <p class="text-gray-300 mb-4">Led the team from the front, spearheaded the club's strategy and operations, culminating in a historic victory at the <strong class="text-white">NCCA National Championship in Houston, TX (March 2025)</strong>.</p>
+                                <ul class="text-gray-300 space-y-3 mt-4">
+                                    <li class="flex items-start"><i data-feather="users" class="w-5 h-5 mr-3 mt-1 text-blue-400 flex-shrink-0"></i><span><strong>People Management:</strong> Led and motivated a diverse team of 15 players and managed a club of 30 players, conducted practice sessions, tryouts, and tournaments with over 130 happy participants.</span></li>
+                                    <li class="flex items-start"><i data-feather="dollar-sign" class="w-5 h-5 mr-3 mt-1 text-blue-400 flex-shrink-0"></i><span><strong>Sponsorship & Finance:</strong> Secured sponsorships for the club with splendid proposals and managed the club's finances and funding.</span></li>
+                                    <li class="flex items-start"><i data-feather="smile" class="w-5 h-5 mr-3 mt-1 text-blue-400 flex-shrink-0"></i><span><strong>Volunteering:</strong> Conducted and took active part in volunteering services promoting community outreach within the club, helping the needy through food donations, stadium clean-ups etc.</span></li>
+                                </ul>
+                            </div>
+                            <div class="flip-indicator">
+                                <i data-feather="refresh-cw" class="w-5 h-5"></i>
+                            </div>
+                        </div>
+                        <div class="flip-card-back glass-card">
+                            <img src="Champion.jpg" alt="Penn State University National Champions 2025" class="w-full h-full object-contain p-4 rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-3xl font-bold shine-effect">Get In Touch</h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                    <p class="text-gray-300 mb-8">
+                        I'm always open to discussing new projects, creative ideas, or opportunities. Feel free to reach out to me!
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i data-feather="mail" class="w-5 h-5 mr-4 text-purple-400"></i>
+                            <span>kritikwrkacc18@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i data-feather="map-pin" class="w-5 h-5 mr-4 text-blue-400"></i>
+                            <span>State College, PA</span>
+                        </div>
+                    </div>
+                    <div class="flex mt-8 space-x-4">
+                        <a href="https://github.com/kritik-sivachitravel" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white hover:bg-purple-500 transition-all">
+                            <i data-feather="github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/kritik-sivachitravel" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-500 transition-all">
+                            <i data-feather="linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/kritiksivac/" target="_blank" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-gray-300 hover:text-white hover:bg-blue-500 transition-all">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <form action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6"> <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Your Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Your Message</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-white placeholder-gray-400" required></textarea>
+                        </div>
+                        <button type="submit" class="relative overflow-hidden px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-md text-white font-medium hover:shadow-lg hover:shadow-purple-500/30 transition-all">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 border-t border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-400">
+                © <span id="year"></span> Kritik Sivachitravel. All rights reserved.
+            </p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
-
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
-
 </html>
